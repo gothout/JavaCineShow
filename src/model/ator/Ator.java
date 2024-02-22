@@ -2,35 +2,24 @@ package model.ator;
 
 public class Ator {
     private String nome;
-    private String sobrenome;
+    private int idade;
     private String nacionalidade;
 
-    protected Ator (){
-
+    public Ator(String nome, int idade, String nacionalidade) {
+        this.nome = nome;
+        this.idade = idade;
+        this.nacionalidade = nacionalidade;
     }
 
     public String getNome() {
         return nome;
     }
 
-    public String getSobrenome() {
-        return sobrenome;
+    public int getIdade() {
+        return idade;
     }
 
     public String getNacionalidade() {
         return nacionalidade;
     }
-
-    protected void setNome (String nome){
-        this.nome = nome;
-    }
-
-    protected void setSobrenome (String sobrenome){
-        this.sobrenome = sobrenome;
-    }
-
-    protected void setNacionalidade (String nacionalidade){
-        this.nacionalidade = nacionalidade;
-    }
-
 }
