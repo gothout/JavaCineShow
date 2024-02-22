@@ -3,47 +3,62 @@ package model.filme;
 import model.diretor.Diretor;
 
 public class Filme {
-
-    protected Filme (){
-
-    }
-
     private String nome;
-    private String genero;
-    private int ano;
+    private int duracao;
     private Diretor diretor;
 
+    private static int nextId = 1;
+
+    private Long id;
+
+    public Filme(String nome, int duracao, Diretor diretor) {
+        this.nome = nome;
+        this.duracao = duracao;
+        this.diretor = diretor;
+        this.id = (long) nextId++;
+    }
 
     public String getNome() {
         return nome;
     }
 
-    public String getGenero() {
-        return genero;
-    }
-
-    public int getAno() {
-        return ano;
+    public int getDuracao() {
+        return duracao;
     }
 
     public Diretor getDiretor() {
         return diretor;
     }
 
-    protected void setNome (String nome){
+    public Long getId() {
+        return id;
+    }
+
+    public void setNome(String nome) {
         this.nome = nome;
     }
 
-    protected void setGenero (String genero){
-        this.genero = genero;
+    public void setDuracao(int duracao) {
+        this.duracao = duracao;
     }
 
-    protected void setAno (int ano){
-        this.ano = ano;
-    }
-
-    protected void setDiretor (Diretor diretor){
+    public void setDiretor(Diretor diretor) {
         this.diretor = diretor;
     }
+
+    public void getId(Long id) {
+        this.id = id;
+    }
+
+    public String toString() {
+        return "Filme{" +
+                "nome='" + nome + '\'' +
+                ", duracao=" + duracao +
+                ", diretor=" + diretor +
+                ", id=" + id +
+                '}';
+    }
+
+    
 
 }
