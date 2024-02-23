@@ -1,5 +1,5 @@
-package model.repository;
-import model.ator.Ator;
+package com.ada.t1113.repository;
+import com.ada.t1113.model.ator.Ator;
 import java.util.List;
 
 public interface AtorRepository {
