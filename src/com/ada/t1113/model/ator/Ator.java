@@ -1,11 +1,11 @@
-package model.diretor;
+package com.ada.t1113.model.ator;
 
-public class Diretor {
+public class Ator {
     private String nome;
     private int idade;
     private String nacionalidade;
 
-    public Diretor(String nome, int idade, String nacionalidade) {
+    public Ator(String nome, int idade, String nacionalidade) {
         this.nome = nome;
         this.idade = idade;
         this.nacionalidade = nacionalidade;

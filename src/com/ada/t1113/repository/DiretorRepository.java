@@ -1,5 +1,5 @@
-package model.repository;
-import model.diretor.Diretor;
+package com.ada.t1113.repository;
+import com.ada.t1113.model.diretor.Diretor;
 import java.util.List;
 
 public interface DiretorRepository {

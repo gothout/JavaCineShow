@@ -1,17 +1,15 @@
-package model.filme;
-
-import model.diretor.Diretor;
+package com.ada.t1113.model.filme;
 
 public class Filme {
     private String nome;
     private int duracao;
-    private Diretor diretor;
+    private String diretor;
 
     private static int nextId = 1;
 
     private Long id;
 
-    public Filme(String nome, int duracao, Diretor diretor) {
+    public Filme(String nome, int duracao, String diretor){
         this.nome = nome;
         this.duracao = duracao;
         this.diretor = diretor;
@@ -26,7 +24,7 @@ public class Filme {
         return duracao;
     }
 
-    public Diretor getDiretor() {
+    public String getDiretor() {
         return diretor;
     }
 
@@ -42,7 +40,7 @@ public class Filme {
         this.duracao = duracao;
     }
 
-    public void setDiretor(Diretor diretor) {
+    public void setDiretor(String diretor) {
         this.diretor = diretor;
     }
 
@@ -51,12 +49,12 @@ public class Filme {
     }
 
     public String toString() {
-        return "Filme{" +
+        return "- " +
                 "nome='" + nome + '\'' +
-                ", duracao=" + duracao +
+                ", duracao=" + duracao + " minutos" +
                 ", diretor=" + diretor +
                 ", id=" + id +
-                '}';
+                '.';
     }
 
     

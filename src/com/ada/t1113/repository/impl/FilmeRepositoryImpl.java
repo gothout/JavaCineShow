@@ -1,7 +1,7 @@
-package model.repository.impl;
+package com.ada.t1113.repository.impl;
 
-import model.repository.FilmeRepository;
-import model.filme.Filme;
+import com.ada.t1113.repository.FilmeRepository;
+import com.ada.t1113.model.filme.Filme;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,4 +37,10 @@ public class FilmeRepositoryImpl implements FilmeRepository {
     public List<Filme> pesquisarPorNome(String nome) {
         return filmes.stream().filter(f -> f.getNome().contains(nome)).collect(Collectors.toList());
     }
+
+    @Override
+        public List<Filme> listarTodos() {
+            System.out.println(filmes.stream().map(f -> f.toString()).collect(Collectors.joining("\n")));
+            return new ArrayList<>(filmes);
+        }
 }
