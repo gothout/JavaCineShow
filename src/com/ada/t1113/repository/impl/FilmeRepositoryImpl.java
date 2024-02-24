@@ -2,15 +2,20 @@ package com.ada.t1113.repository.impl;
 
 import com.ada.t1113.repository.FilmeRepository;
 import com.ada.t1113.model.filme.Filme;
+import com.ada.t1113.model.diretor.Diretor;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-
 public class FilmeRepositoryImpl implements FilmeRepository {
+    private static final FilmeRepositoryImpl INSTANCE = new FilmeRepositoryImpl();
+    private List<Filme> filmes = new ArrayList<>();
 
-    private List<Filme> filmes = new ArrayList<Filme>();
+    public static FilmeRepositoryImpl getInstance() {
+        return INSTANCE;
+    }
+
     @Override
     public Filme inserir(Filme filme) {
         filmes.add(filme);
@@ -29,7 +34,7 @@ public class FilmeRepositoryImpl implements FilmeRepository {
 
     @Override
     public Filme excluir(Filme filme) {
-        filmes.stream().map(Filme::getId).collect(Collectors.toList()).remove(filme.getId());
+        filmes.removeIf(f -> f.getId().equals(filme.getId()));
         return filme;
     }
 
@@ -39,8 +44,8 @@ public class FilmeRepositoryImpl implements FilmeRepository {
     }
 
     @Override
-        public List<Filme> listarTodos() {
-            System.out.println(filmes.stream().map(f -> f.toString()).collect(Collectors.joining("\n")));
-            return new ArrayList<>(filmes);
-        }
+    public List<Filme> listarTodos() {
+        System.out.println(filmes.stream().map(Filme::toString).collect(Collectors.joining("\n")));
+        return new ArrayList<>(filmes);
+    }
 }

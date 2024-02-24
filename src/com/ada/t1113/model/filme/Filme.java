@@ -3,13 +3,13 @@ package com.ada.t1113.model.filme;
 public class Filme {
     private String nome;
     private int duracao;
-    private String diretor;
+    private String diretor;  // Adicionando referência ao Diretor
 
     private static int nextId = 1;
 
-    private Long id;
+    public Long id;
 
-    public Filme(String nome, int duracao, String diretor){
+    public Filme(String nome, int duracao, String diretor) {
         this.nome = nome;
         this.duracao = duracao;
         this.diretor = diretor;
@@ -41,10 +41,10 @@ public class Filme {
     }
 
     public void setDiretor(String diretor) {
-        this.diretor = diretor;
+        this.diretor = String.valueOf(diretor);
     }
 
-    public void getId(Long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -52,11 +52,10 @@ public class Filme {
         return "- " +
                 "nome='" + nome + '\'' +
                 ", duracao=" + duracao + " minutos" +
-                ", diretor=" + diretor +
+                ", diretor='" + diretor + "'" +    // Ajuste aqui para usar diretamente a string do diretor
                 ", id=" + id +
                 '.';
     }
 
-    
 
 }

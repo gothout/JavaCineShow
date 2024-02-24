@@ -22,4 +22,13 @@ public class Diretor {
     public String getNacionalidade() {
         return nacionalidade;
     }
+
+    @Override
+    public String toString() {
+        return "Diretor{" +
+                "nome='" + nome + '\'' +
+                ", idade=" + idade +
+                ", nacionalidade='" + nacionalidade + '\'' +
+                '}';
+    }
 }
