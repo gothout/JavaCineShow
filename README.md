@@ -17,8 +17,8 @@ Este é o repositório do projeto JavaCineShow, desenvolvido como parte do curso
 #### Funcionalidades
 Atualmente, o projeto JavaCineShow está em uma fase inicial de desenvolvimento e oferece funcionalidades básicas para adicionar e listar filmes. A equipe está trabalhando para expandir e aprimorar o projeto, incluindo novas funcionalidades e melhorias na experiência do usuário.
 
-##### Participantes
-##### - Lucas Daniel Chaves
-##### - Paulo Kamibayashi
-##### - Clairton Lima
-##### - Gleidealisson Andrade
+###### Participantes
+#### - Lucas Daniel Chaves
+#### - Paulo Kamibayashi
+#### - Clairton Lima
+#### - Gleidealisson Andrade
